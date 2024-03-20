@@ -18,6 +18,12 @@ export default {
         raleway: ["Raleway Variable", "sans-serif"],
       },
     },
+    dropShadow: {
+      '4xl': [
+          '0 20px 13px rgb(0 0 0 / 30%)',
+          '0 8px 5px rgb(141 114 78 / 30%)'
+      ]
+    },
     screens: {
       xs: "480px",
       ss: "620px",
