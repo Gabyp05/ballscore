@@ -10,6 +10,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@fontsource-variable/raleway": "^5.0.18",
+    "@fontsource-variable/syne": "^5.0.19",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },

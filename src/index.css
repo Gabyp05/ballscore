@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+    font-family: 'Syne Variable', sans-serif;
+}
+
+p {
+    font-family: 'Raleway Variable', sans-serif;
+}
