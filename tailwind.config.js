@@ -1,4 +1,6 @@
 /** @type {import('tailwindcss').Config} */
+import animations from '@midudev/tailwind-animations'
+
 export default {
   content: [
     "./index.html",
@@ -25,6 +27,10 @@ export default {
           '0 8px 5px rgb(141 114 78 / 30%)'
       ]
     },
+    animation: {
+      poped: 'pop 2s ease-out both infinite;',
+      spin: 'spin 1s linear infinite;'
+    },
     screens: {
       xs: "480px",
       ss: "620px",
@@ -34,5 +40,7 @@ export default {
       xl: "1700px",
     },
   },
-  plugins: [],
+  plugins: [
+    animations
+  ],
 }
