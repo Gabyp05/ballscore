@@ -1,5 +1,5 @@
 import React from 'react'
-import { pelota } from "../assets"
+import { pelota, icon } from "../assets"
 
 const Hero = () => {
   return (
@@ -10,6 +10,12 @@ const Hero = () => {
           <h1 className='font-syne font-bold text-7xl text-white drop-shadow-4xl'><span className='text-primary'>Baseball</span> Score</h1>
         </div>
         <h1 className='font-syne font-bold text-[56px] text-white text-center text-pretty'>Sigue los resultados en vivo de tus equipos favoritos</h1>
+
+        <div className="pt-8">
+          <a href="#" className="flex flex-row gap-x-5 bg-primary hover:bg-secondary text-white font-raleway tracking-widest font-bold text-xs uppercase rounded-full px-8 py-3">
+            Ver equipos  <img src={icon} alt="Arrow" width={16} height={10} />
+          </a>
+        </div>
       </div>
     </section>
   )
