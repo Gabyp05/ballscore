@@ -3,6 +3,7 @@ import Header from "./components/Header"
 import Home from "./pages/Home";
 import Results from "./pages/Results";
 import Teams from "./pages/Teams";
+import Footer from "./components/Footer";
 
 function App() {
 
@@ -16,6 +17,7 @@ function App() {
         <Route path="/results" element={<Results />} />
         <Route path="/teams" element={<Teams />} />
       </Routes>
+      <Footer />
     </BrowserRouter>
     </div>
     </>

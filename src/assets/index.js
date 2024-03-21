@@ -34,11 +34,17 @@ import Padres from "./padres.png";
 import Giants from "./giants.png";
 import Cardinals from "./cardinals.png";
 import Washington from "./washington.png";
+import github from "./github.svg";
+import linkedin from "./linkedin.svg";
+import instagram from "./instagram.svg";
 
 export {
     logo,
     menu,
     close,
+    github,
+    linkedin,
+    instagram,
     pelota,
     icon,
     jugador,

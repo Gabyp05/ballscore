@@ -1,4 +1,4 @@
-import {Detroit, Baltimore, Boston, WhiteSox, Cleveland, Houston, Kansas, Angels, Minnesota, Yankees, Oakland, Seattle, Tampa, Texas, Toronto, Arizona, Atlanta, Cubs, Cincinnati, Colorado, Dodgers,Miami, Milwaukee, Mets, Phillips, Pirates, Padres, Giants, Cardinals, Washington} from "./assets";
+import {Detroit, Baltimore, Boston, WhiteSox, Cleveland, Houston, Kansas, Angels, Minnesota, Yankees, Oakland, Seattle, Tampa, Texas, Toronto, Arizona, Atlanta, Cubs, Cincinnati, Colorado, Dodgers,Miami, Milwaukee, Mets, Phillips, Pirates, Padres, Giants, Cardinals, Washington, github, linkedin, instagram,} from "./assets";
 
 export const navLinks = [
     {
@@ -15,6 +15,42 @@ export const navLinks = [
       id: "teams",
       name: "Equipos",
       path: '/teams'
+    },
+];
+
+export const footerLinks = [
+    {
+      id: "home",
+      name: "Home",
+      path: '/'
+    },
+    {
+      id: "results",
+      name: "Resultados",
+      path: '/results'
+    },
+    {
+      id: "teams",
+      name: "Equipos",
+      path: '/teams'
+    },
+];
+
+export const socialMedia = [
+    {
+      id: "social-media-1",
+      icon: linkedin,
+      link: "https://www.linkedin.com/in/gabyp05",
+    },
+    {
+      id: "social-media-2",
+      icon: github,
+      link: "https://github.com/Gabyp05/",
+    },
+    {
+      id: "social-media-3",
+      icon: instagram,
+      link: "https://www.instagram.com/gabyp05",
     },
   ];
 

@@ -1,8 +1,10 @@
-import React from 'react'
+import AllResults from '../components/Results/AllResults'
 
 const Results = () => {
   return (
-    <div>Results</div>
+    <>
+      <AllResults />
+    </>
   )
 }
 
