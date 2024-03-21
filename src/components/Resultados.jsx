@@ -1,13 +1,15 @@
 import React, { useEffect, useState } from 'react';
-import { rays, whiteSox } from "../assets"
-// import { teamLogos } from './data.js';
+import { Link } from "react-router-dom"
+import { teamLogos } from '../data.js';
 
 const Resultados = () => {
     const [games, setGames] = useState([]);
+    const today = new Date();
+    const formattedDate = today.toISOString().split('T')[0];
 
     useEffect(() => {
         const fetchGameSchedule = async () => {
-        const response = await fetch('https://baseball4.p.rapidapi.com/v1/mlb/schedule?date=2024-03-21', {
+        const response = await fetch(`https://baseball4.p.rapidapi.com/v1/mlb/schedule?date=${formattedDate}`, {
             method: 'GET',
             headers: {
             'X-RapidAPI-Key': '425a2f8650msh2c93977c1d9775fp1d700djsnccb1675c3877',
@@ -31,7 +33,8 @@ const Resultados = () => {
     
                 item.gameDate = formattedDate;
             });
-            setGames(data);
+            const filteredData = data.slice(0, 7);
+            setGames(filteredData);
         }
         };
     
@@ -40,7 +43,7 @@ const Resultados = () => {
     
 
   return (
-    <section className='container mx-auto py-16 mb-80 flex flex-col animate-fade-in-down'>
+    <section id='resultados' className='container mx-auto py-16 mb-80 flex flex-col animate-fade-in-down'>
         <div className="max-w-4xl flex flex-col items-start justify-center pb-8">
             <h1 className='font-syne font-bold text-7xl text-white mb-2.5'>
                 Últimos <span className='text-primary'>Resultados</span> 
@@ -56,22 +59,25 @@ const Resultados = () => {
                     </div>
                     <div className="flex flex-row items-baseline justify-center gap-x-12">
                         <div className="flex flex-col items-center">
-                            <div className="flex flex-col gap-4 items-center">
-                                <img src={whiteSox} alt="Equipo visitante" />
-                                {/* <img src={teamLogos[game.teams?.away?.team?.id]?.src} alt={teamLogos[game.teams?.away?.team?.id]?.alt} /> */}
-                                <h2 className='font-raleway text-white text-[18px] text-center font-bold'>{game.teams?.away?.team?.name}</h2>
-                            </div>
-                            <span className='font-raleway text-white text-[50px] font-bold'> {game.teams?.home?.score} </span>
+                            {/* <Link to={`/team/${game.teams?.away?.team?.id}`}> */}
+                                <div className="flex flex-col gap-4 items-center">
+                                    <img src={teamLogos[game.teams?.away?.team?.id]?.src} alt={teamLogos[game.teams?.away?.team?.id]?.alt} />
+                                    <h2 className='font-raleway text-white text-[18px] text-center font-bold'>{game.teams?.away?.team?.name}</h2>
+                                </div>
+                            {/* </Link> */}
+                            <span className='font-raleway text-white text-[50px] font-bold'> {game.teams?.away?.score} </span>
                         </div>    
                         <div className="vs">
                             <h1 className='font-syne font-bold text-7xl text-white drop-shadow-4xl'>VS</h1>
                         </div> 
                         <div className="flex flex-col items-center">
-                            <div className="flex flex-col gap-4 items-center">
-                                <img src={rays} alt="Equipo visitante" />
-                                <h2 className='font-raleway text-white text-[18px] text-center font-bold'> {game.teams?.home?.team?.name}</h2>
-                            </div>
-                            <span className='font-raleway text-white text-[50px] font-bold'> {game.teams?.away?.score} </span>
+                            {/* <Link to={`/team/${game.teams?.home?.team?.id}`}> */}
+                                <div className="flex flex-col gap-4 items-center">
+                                    <img src={teamLogos[game.teams?.home?.team?.id]?.src} alt={teamLogos[game.teams?.home?.team?.id]?.alt} />
+                                    <h2 className='font-raleway text-white text-[18px] text-center font-bold'> {game.teams?.home?.team?.name}</h2>
+                                </div>
+                            {/* </Link> */}
+                            <span className='font-raleway text-white text-[50px] font-bold'> {game.teams?.home?.score} </span>
                         </div>   
                     </div>     
                 </div>
@@ -81,36 +87,15 @@ const Resultados = () => {
             <h1 className='font-syne font-bold text-2xl text-white mb-2.5'>
                 Cargando...
             </h1>
-            )}
-            {/* <div className="w-[570px] h-[320px] bg-white/10 backdrop-blur-sm border-2 border-white/20 overflow-hidden rounded-[32px] ">
-                <div className="relative flex flex-col justify-center w-[570px] h-[320px] bg-transparent  p-5 rounded-[32px]">
-                    <div className="flex flex-col items-center gap-2 mb-4">
-                        <h1 className='text-white font-raleway font-bold'>Fecha y hora </h1>
-                    </div>
-                    <div className="flex flex-row items-baseline justify-center gap-x-12">
-                        <div className="flex flex-col items-center">
-                            <div className="flex flex-col gap-4 items-center">
-                                <img src={whiteSox} alt="Equipo visitante" />
-                                <h2 className='font-raleway text-white text-[18px] font-bold'>Equipo Visitante</h2>
-                            </div>
-                            <span className='font-raleway text-white text-[50px] font-bold'> 10 </span>
-                        </div>    
-                        <div className="vs">
-                            <h1 className='font-syne font-bold text-7xl text-white drop-shadow-4xl'>VS</h1>
-                        </div> 
-                        <div className="flex flex-col items-center">
-                            <div className="flex flex-col gap-4 items-center">
-                                <img src={rays} alt="Equipo visitante" />
-                                <h2 className='font-raleway text-white text-[18px] font-bold'>Equipo Local</h2>
-                            </div>
-                            <span className='font-raleway text-white text-[50px] font-bold'> 4 </span>
-                        </div>   
-                    </div>     
-                </div>
-            </div> */}
-                     
+            )}                     
         </div>
-        
+        <div className="flex justify-center pt-12">
+            <Link to="/results">
+                <button className="max-w-[270px] flex flex-row gap-x-5 bg-primary hover:bg-secondary text-white font-raleway tracking-widest font-bold text-xs uppercase rounded-full px-8 py-3">
+                    Ver todos los resultados
+                </button>
+            </Link>
+        </div>   
     </section>
   )
 }

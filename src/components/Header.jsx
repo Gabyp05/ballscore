@@ -1,4 +1,6 @@
 import { useState } from "react"
+import { Link, NavLink } from "react-router-dom"
+import { navLinks } from '../data';
 import { logo, menu, close } from "../assets"
 
 const Header = () => {
@@ -12,9 +14,18 @@ const Header = () => {
         </div>
         <nav className="hidden ss:flex font-raleway uppercase font-bold leading-3 text-sm text-white">
             <ul className="flex flex-row gap-x-11 tracking-widest">
-                <li className="hover:text-primary"><a href="#home">Home</a></li>
-                <li className="hover:text-primary"><a href="#resultados">Resultados</a></li>
-                <li className="hover:text-primary"><a href="#equipos">Equipos</a></li>
+              {navLinks.map((nav) => (
+                  <li 
+                  key={nav.id}
+                  className={`font-raleway font-medium cursor-pointer text-[16px] text-white hover:text-primary`}
+                  >
+                  <NavLink to={nav.path} className={({ isActive }) =>
+                      isActive ? 'text-primary font-bold' : 'text-white font-semibold'
+                  }>
+                      {nav.name}
+                  </NavLink>
+                  </li>
+              ))}
             </ul>
         </nav>
         <div className="ss:hidden">
@@ -26,10 +37,19 @@ const Header = () => {
           />
           <div className={`${toggle ? 'flex' : 'hidden'} font-raleway uppercase font-bold leading-3 text-sm p-4 bg-gradient-to-t from-[#FDD995] via-[#FAAF6A] to-[#F8853E] absolute top-14 right-0 mx-4 my-2 min-w-[140px]  rounded-xl menu z-50`}>
             <ul className="list-none flex flex-col justify-end items-center flex-1 gap-y-4 tracking-widest">
-              <li className="hover:text-white"><a href="#home">Home</a></li>
-              <li className="hover:text-white"><a href="#resultados">Resultados</a></li>
-              <li className="hover:text-white"><a href="#equipos">Equipos</a></li>
-            </ul>
+              {navLinks.map((nav) => (
+                    <li 
+                    key={nav.id}
+                    className={`font-raleway font-medium cursor-pointer text-[16px] text-white hover:text-primary`}
+                    >
+                    <NavLink to={nav.path} className={({ isActive }) =>
+                        isActive ? 'text-dark font-bold' : 'text-white font-semibold'
+                    }>
+                        {nav.name}
+                    </NavLink>
+                    </li>
+                ))}
+            </ul>  
           </div>
         </div>
     </header>

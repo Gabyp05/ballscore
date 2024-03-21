@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from "react-router-dom"
 import { jugador } from "../assets"
 
 const CTA = () => {
@@ -13,9 +14,11 @@ const CTA = () => {
             </p>
 
             <div className='pt-4'>
-                <a href="#" className="flex flex-row gap-x-5 bg-primary hover:bg-secondary text-white font-raleway tracking-widest font-bold text-xs uppercase rounded-full px-8 py-3 max-w-40">
-                    Ver equipos
-                </a>
+                <Link to="/teams">
+                    <button className="flex flex-row gap-x-5 bg-primary hover:bg-secondary text-white font-raleway tracking-widest font-bold text-xs uppercase rounded-full px-8 py-3 max-w-40">
+                        Ver equipos
+                    </button>
+                </Link>
             </div>
         </div>
         <div className="right">
