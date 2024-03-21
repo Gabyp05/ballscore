@@ -59,7 +59,7 @@ const AllResults = () => {
     <section className='container mx-auto py-16 mb-80 flex flex-col animate-fade-in-down'>
         <div className="max-w-4xl flex flex-row gap-2 items-start justify-center pb-8">
           <input type="date" id="fechaConsulta" value={fechaSeleccionada} onChange={handleFechaChange} />
-          <button onClick={handleConsultaClick}>Consultar</button>
+          <button onClick={handleConsultaClick} className='max-w-[270px] flex flex-row gap-x-5 bg-primary hover:bg-secondary text-white font-raleway tracking-widest font-bold text-xs uppercase rounded-full px-8 py-3'>Consultar</button>
         </div>
         <div className="grid grid-cols-2 gap-10 justify-center">
             {games.length > 0 ? (
