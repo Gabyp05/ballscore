@@ -5,8 +5,6 @@ const AllResults = () => {
 
   const [games, setGames] = useState([]);
   const [fechaSeleccionada, setFechaSeleccionada] = useState(new Date().toISOString().slice(0, 10));
-  const [resultados, setResultados] = useState([]);
-  const [cargando, setCargando] = useState(true);
 
   const handleFechaChange = (event) => {
     setFechaSeleccionada(event.target.value);
@@ -40,12 +38,10 @@ const AllResults = () => {
               item.gameDate = formattedDate;
           });
           setGames(data);
-          setCargando(false);
       }
 
     } catch (error) {
       console.error('Error al realizar la consulta a la API:', error);
-      setCargando(false);
     }
   };
 
