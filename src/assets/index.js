@@ -1,4 +1,4 @@
-import logo from "./LogoBallScore.svg";
+import logo from "./LogoBallScore.png";
 import pelota from "./pelota.png";
 import menu from "./menu.svg";
 import close from "./close.svg";
