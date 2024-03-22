@@ -5,6 +5,7 @@ export default {
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
+    "./node_modules/flowbite/**/*.js"
   ],
   theme: {
     extend: {
@@ -34,13 +35,14 @@ export default {
     screens: {
       xs: "480px",
       ss: "620px",
-      sm: "768px",
+      sm: "769px",
       md: "1060px",
       lg: "1200px",
       xl: "1700px",
     },
   },
   plugins: [
-    animations
+    animations,
+    require('flowbite/plugin')
   ],
 }
