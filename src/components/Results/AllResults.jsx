@@ -52,44 +52,44 @@ const AllResults = () => {
 
 
   return (
-    <section className='container mx-auto py-16 mb-80 flex flex-col animate-fade-in-down'>
+    <section className='container mx-auto py-16 mb-10 flex flex-col animate-fade-in-down'>
         <div className="max-w-4xl flex flex-col sm:flex-row gap-2 items-center pb-8">
           <input type="date" id="fechaConsulta" className='max-w-[200px] bg-gray-50 border border-gray-300 text-gray-900 text-lg rounded-lg focus:ring-primary focus:border-primary block w-full ps-6 px-8' value={fechaSeleccionada} onChange={handleFechaChange} />     
           <button onClick={handleConsultaClick} className='max-w-[270px] flex flex-row gap-x-5 bg-primary hover:bg-secondary text-white font-raleway tracking-widest font-bold text-lg uppercase rounded-lg px-8 py-2'>Consultar</button>
         </div>
-        <div className="grid grid-cols-2 gap-10 justify-center">
+        <div className="grid md:grid-cols-2 gap-2.5 md:gap-10 justify-center">
             {games.length > 0 ? (
             games.slice(0, -1).map((game, index) => (
-            <div key={index} className="w-[570px] h-[320px] bg-white/10 backdrop-blur-sm border-2 border-white/20 overflow-hidden rounded-[32px] ">
-                <div className="relative flex flex-col justify-center w-[570px] h-[320px] bg-transparent  p-5 rounded-[32px]">
-                    <div className="flex flex-col items-center gap-2 mb-4">
-                        <h1 className='text-white font-raleway font-bold'>{game.gameDate}</h1>
-                    </div>
-                    <div className="flex flex-row items-baseline justify-center gap-x-12">
-                        <div className="flex flex-col items-center">
-                            {/* <Link to={`/team/${game.teams?.away?.team?.id}`}> */}
-                                <div className="flex flex-col gap-4 items-center">
-                                    <img src={teamLogos[game.teams?.away?.team?.id]?.src} alt={teamLogos[game.teams?.away?.team?.id]?.alt} />
-                                    <h2 className='font-raleway text-white text-[18px] text-center font-bold'>{game.teams?.away?.team?.name}</h2>
-                                </div>
-                            {/* </Link> */}
-                            <span className='font-raleway text-white text-[50px] font-bold'> {game.teams?.away?.score} </span>
-                        </div>    
-                        <div className="vs">
-                            <h1 className='font-syne font-bold text-7xl text-white drop-shadow-4xl'>VS</h1>
-                        </div> 
-                        <div className="flex flex-col items-center">
-                            {/* <Link to={`/team/${game.teams?.home?.team?.id}`}> */}
-                                <div className="flex flex-col gap-4 items-center">
-                                    <img src={teamLogos[game.teams?.home?.team?.id]?.src} alt={teamLogos[game.teams?.home?.team?.id]?.alt} />
-                                    <h2 className='font-raleway text-white text-[18px] text-center font-bold'> {game.teams?.home?.team?.name}</h2>
-                                </div>
-                            {/* </Link> */}
-                            <span className='font-raleway text-white text-[50px] font-bold'> {game.teams?.home?.score} </span>
-                        </div>   
-                    </div>     
-                </div>
-            </div>
+              <div key={index} className="w-[300px] h-[180px] md:w-[570px] md:h-[320px] bg-white/10 backdrop-blur-sm border-2 border-white/20 overflow-hidden rounded-2xl md:rounded-[32px]">
+              <div className="relative flex flex-col justify-center w-[300px] h-[180px] md:w-[570px] md:h-[320px] bg-transparent pd-2.5 md:p-5 rounded-2xl md:rounded-[32px]">
+                  <div className="flex flex-col items-center gap-2 mb-4">
+                      <h1 className='text-white text-sm sm:text-xl font-raleway font-bold'>{game.gameDate}</h1>
+                  </div>
+                  <div className="flex flex-row items-baseline justify-center gap-x-4 md:gap-x-12">
+                      <div className="flex flex-col items-center">
+                      {/* <Link to={`/team/${game.teams?.away?.team?.id}`}>  */}
+                          <div className="flex flex-col gap-4 items-center">
+                              <img src={teamLogos[game.teams?.away?.team?.id]?.src} alt={teamLogos[game.teams?.away?.team?.id]?.alt}  className='h-[50px] sm:h-auto max-w-[100px] md:max-w-[150px] object-contain'/>
+                              <h2 className='font-raleway text-white text-xs md:text-[18px] text-center font-bold'>{game.teams?.away?.team?.name}</h2>
+                          </div>  
+                      {/* </Link>  */}
+                          <span className='md:pt-4 font-raleway text-white text-2xl md:text-[50px] font-bold'> {game.teams?.away?.score} </span>
+                      </div>    
+                      <div className="vs">
+                          <h1 className='font-syne font-bold text-xl md:text-7xl text-white drop-shadow-4xl'>VS</h1>
+                      </div> 
+                      <div className="flex flex-col items-center">    
+                          {/* <Link to={`/team/${game.teams?.home?.team?.id}`}>  */}
+                          <div className="flex flex-col gap-4 items-center">
+                              <img src={teamLogos[game.teams?.home?.team?.id]?.src} alt={teamLogos[game.teams?.home?.team?.id]?.alt}  className='h-[50px] sm:h-auto max-w-[100px] md:max-w-[150px] object-contain' />
+                              <h2 className='font-raleway text-white text-xs md:text-[18px] text-center font-bold'>{game.teams?.home?.team?.name}</h2>
+                          </div> 
+                          {/* </Link>  */}            
+                          <span className='md:pt-4 font-raleway text-white text-2xl md:text-[50px] font-bold'> {game.teams?.home?.score} </span>
+                      </div>   
+                  </div>     
+              </div>
+          </div> 
             ))
             ) : (
             <h1 className='font-syne font-bold text-2xl text-white mb-2.5'>
