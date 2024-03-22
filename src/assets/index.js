@@ -1,4 +1,4 @@
-import logo from "./LogoBallScore.png";
+import logo from "./LogoBallScore.svg";
 import pelota from "./pelota.png";
 import menu from "./menu.svg";
 import close from "./close.svg";
@@ -37,6 +37,15 @@ import Washington from "./washington.png";
 import github from "./github.svg";
 import linkedin from "./linkedin.svg";
 import instagram from "./instagram.svg";
+import budweiser from "./budweiser.png";
+import corona from "./corona.png";
+import gatorade from "./gatorade.png";
+import hankook from "./hankook.png";
+import mastercard from "./mastercard.png";
+import newBalance from "./new-balance.png";
+import nike from "./nike.png";
+import sage from "./sage.png";
+import zoom from "./zoom.png"; 
 
 export {
     logo,
@@ -77,5 +86,14 @@ export {
     Padres,
     Giants,
     Cardinals,
-    Washington
+    Washington,
+    budweiser, 
+    corona, 
+    gatorade, 
+    hankook, 
+    mastercard, 
+    newBalance, 
+    nike, 
+    sage, 
+    zoom
 }
