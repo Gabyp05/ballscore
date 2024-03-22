@@ -30,7 +30,14 @@ export default {
     },
     animation: {
       poped: 'pop 2s ease-out both infinite;',
-      spin: 'spin 1s linear infinite;'
+      spin: 'spin 1s linear infinite;',
+      'infinite-scroll': 'infinite-scroll 25s linear infinite',
+    },
+    keyframes: {
+      'infinite-scroll': {
+          from: { transform: 'translateX(0)' },
+          to: { transform: 'translateX(-100%)' },
+      }
     },
     screens: {
       xs: "480px",
