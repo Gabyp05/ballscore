@@ -46,10 +46,9 @@ const Resultados = () => {
 
   return (
     <section id='resultados' className='container mx-auto py-12 md:py-16 mb-80 flex flex-col animate-fade-in-down'>
-        <div className="max-w-4xl flex flex-col item md:items-start justify-center pb-8">
-            <h1 className='font-syne font-bold text-[36px] text-7xl text-center md:text-start text-white mb-2.5'>
-                Últimos <span className='text-primary'>Resultados</span> 
-            </h1>
+        <div className="max-w-4xl flex flex-col md:flex-row gap-x-2.5 items-center md:items-start justify-center md:justify-start pb-8">
+            <h1 className='font-syne font-bold text-[36px] text-7xl text-center md:text-start text-white mb-2.5'> Últimos </h1>
+            <span className='font-syne font-bold text-[36px] text-7xl mb-2.5 text-primary'>Resultados</span> 
         </div>
         <div className="grid md:grid-cols-2 gap-2.5 md:gap-10 justify-center">
             {games.length > 0 ? ( 
@@ -63,7 +62,7 @@ const Resultados = () => {
                         <div className="flex flex-col items-center">
                         {/* <Link to={`/team/${game.teams?.away?.team?.id}`}>  */}
                             <div className="flex flex-col gap-4 items-center">
-                                <img src={teamLogos[game.teams?.away?.team?.id]?.src} alt={teamLogos[game.teams?.away?.team?.id]?.alt}  className='h-[50px] sm:h-auto max-w-[100px] object-cover'/>
+                                <img src={teamLogos[game.teams?.away?.team?.id]?.src} alt={teamLogos[game.teams?.away?.team?.id]?.alt}  className='h-[50px] sm:h-auto max-w-[100px] md:max-w-[150px] object-contain'/>
                                 <h2 className='font-raleway text-white text-xs md:text-[18px] text-center font-bold'>{game.teams?.away?.team?.name}</h2>
                             </div>  
                         {/* </Link>  */}
@@ -75,7 +74,7 @@ const Resultados = () => {
                         <div className="flex flex-col items-center">    
                             {/* <Link to={`/team/${game.teams?.home?.team?.id}`}>  */}
                             <div className="flex flex-col gap-4 items-center">
-                                <img src={teamLogos[game.teams?.home?.team?.id]?.src} alt={teamLogos[game.teams?.home?.team?.id]?.alt}  className='h-[50px] sm:h-auto max-w-[100px] object-cover' />
+                                <img src={teamLogos[game.teams?.home?.team?.id]?.src} alt={teamLogos[game.teams?.home?.team?.id]?.alt}  className='h-[50px] sm:h-auto max-w-[100px] md:max-w-[150px] object-contain' />
                                 <h2 className='font-raleway text-white text-xs md:text-[18px] text-center font-bold'>{game.teams?.home?.team?.name}</h2>
                             </div> 
                             {/* </Link>  */}            
