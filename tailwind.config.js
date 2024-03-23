@@ -36,7 +36,7 @@ export default {
     keyframes: {
       infiniteCarrousel: {
           from: { transform: 'translateX(0)' },
-          to: { transform: 'translateX(-100%)' },
+          to: { transform: 'translateX(calc(-200px * 9 - 0.25rem * 18))' },
       },
       pop: {
         '0%': { transform: 'scale(1)' },
