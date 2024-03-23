@@ -5,35 +5,37 @@ import close from "./close.svg";
 import icon from "./icon.svg";
 import jugador from "./Jugador.png";
 import Detroit from "./detroit.png";
-import Baltimore from "./baltimore.png";
+import Baltimore from "./baltimore.svg";
 import Boston from "./boston.png";
 import WhiteSox from "./whiteSox.png";
 import Cleveland from "./cleveland.png";
-import Houston from "./houston.png";
-import Kansas from "./kansas.png";
+import Houston from "./houston.svg";
+import Kansas from "./kansas.svg";
 import Angels from "./angels.png";
 import Minnesota from "./minnesota.png";
-import Yankees from "./yankees.png";
-import Oakland from "./oakland.png";
-import Seattle from "./seattle.png";
-import Tampa from "./tampa.png";
-import Texas from "./texas.png";
+import Yankees from "./yankees.svg";
+import Oakland from "./oakland.svg";
+import Seattle from "./seattle.svg";
+import Tampa from "./tampa.svg";
+import Texas from "./texas.svg";
 import Toronto from "./toronto.png";
 import Arizona from "./arizona.png";
-import Atlanta from "./atlanta.png";
+import Atlanta from "./atlanta.svg";
 import Cubs from "./cubs.png";
 import Cincinnati from "./cincinnati.png";
 import Colorado from "./colorado.png";
-import Dodgers from "./dodgers.png";
+import Dodgers from "./dodgers.svg";
 import Miami from "./miami.png";
-import Milwaukee from "./milwaukee.png";
-import Mets from "./mets.png";
-import Phillips from "./philadelphia.png";
+import Milwaukee from "./milwaukee.svg";
+import Mets from "./mets.svg";
+import Phillips from "./philadelphia.svg";
 import Pirates from "./pirates.png";
 import Padres from "./padres.png";
-import Giants from "./giants.png";
-import Cardinals from "./cardinals.png";
-import Washington from "./washington.png";
+import Giants from "./giants.svg";
+import Cardinals from "./cardinals.svg";
+import Washington from "./washington.svg";
+import national from "./national_league.png";
+import american from "./american_league.png";
 import github from "./github.svg";
 import linkedin from "./linkedin.svg";
 import instagram from "./instagram.svg";
@@ -88,6 +90,8 @@ export {
     Giants,
     Cardinals,
     Washington,
+    national,
+    american,
     budweiser, 
     corona, 
     gatorade, 
