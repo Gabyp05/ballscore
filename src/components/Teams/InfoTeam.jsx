@@ -34,7 +34,13 @@ const InfoTeam = () => {
   return (
     <section id='resultados' className='container mx-auto py-16 mb-80 flex flex-col items-center justify-center'>
         {team.map((team) => ( 
-        <h1 className='text-white text-7xl'>{team.name}</h1>
+        <div className="flex flex-col gap-4">
+            <h1 className='text-white text-7xl'>{team.name}</h1>
+            <p>Abreviación: {team.abbreviation}</p>
+            <p>Estadio: {team.venue.name} </p>
+            <p>Liga: {team.league.name}</p>
+            <p>División: {team.division.name}</p>
+        </div>
         ))}
 
         <div className="table">
