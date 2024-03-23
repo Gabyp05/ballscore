@@ -70,8 +70,8 @@ const AllResults = () => {
                       <div className="flex flex-col items-center">
                       <Link to={`/teams/${game.teams?.away?.team?.id}`}> 
                           <div className="flex flex-col gap-4 items-center">
-                              <img src={teamLogos[game.teams?.away?.team?.id]?.src} alt={teamLogos[game.teams?.away?.team?.id]?.alt}  className='h-[50px] sm:h-auto max-w-[100px] md:max-w-[150px] object-contain'/>
-                              <h2 className='font-raleway text-white text-xs md:text-[18px] text-center font-bold'>{game.teams?.away?.team?.name}</h2>
+                              <img src={teamLogos[game.teams?.away?.team?.id]?.src} alt={teamLogos[game.teams?.away?.team?.id]?.alt}  className='h-[50px] sm:h-[90px] max-w-[100px] md:max-w-[150px] object-contain'/>
+                              <h2 className='font-raleway text-white text-xs md:text-[18px] text-center font-bold leading-[15px]'>{game.teams?.away?.team?.name}</h2>
                           </div>  
                       </Link>  
                           <span className='md:pt-4 font-raleway text-white text-2xl md:text-[50px] font-bold'> {game.teams?.away?.score} </span>
@@ -82,8 +82,8 @@ const AllResults = () => {
                       <div className="flex flex-col items-center">    
                           <Link to={`/teams/${game.teams?.home?.team?.id}`}>  
                           <div className="flex flex-col gap-4 items-center">
-                              <img src={teamLogos[game.teams?.home?.team?.id]?.src} alt={teamLogos[game.teams?.home?.team?.id]?.alt}  className='h-[50px] sm:h-auto max-w-[100px] md:max-w-[150px] object-contain' />
-                              <h2 className='font-raleway text-white text-xs md:text-[18px] text-center font-bold'>{game.teams?.home?.team?.name}</h2>
+                              <img src={teamLogos[game.teams?.home?.team?.id]?.src} alt={teamLogos[game.teams?.home?.team?.id]?.alt}  className='h-[50px] sm:h-[90px] max-w-[100px] md:max-w-[150px] object-contain' />
+                              <h2 className='font-raleway text-white text-xs md:text-[18px] text-center font-bold leading-[15px]'>{game.teams?.home?.team?.name}</h2>
                           </div> 
                           </Link>             
                           <span className='md:pt-4 font-raleway text-white text-2xl md:text-[50px] font-bold'> {game.teams?.home?.score} </span>

@@ -10,7 +10,9 @@ const Header = () => {
   return (
     <header className="container mx-auto py-6 px-2 sm:px-0 flex items-center justify-between z-50">
         <div className="logo">
+          <Link to="/">
             <img src={logo} alt="Logo BallScore" />
+          </Link>
         </div>
         <nav className="hidden ss:flex font-raleway uppercase font-bold leading-3 text-sm text-white">
             <ul className="flex flex-row gap-x-11 tracking-widest">
