@@ -46,6 +46,7 @@ import newBalance from "./new-balance.png";
 import nike from "./nike.png";
 import sage from "./sage.png";
 import zoom from "./zoom.png"; 
+import construccion from "./construccion.png"
 
 export {
     logo,
@@ -95,5 +96,6 @@ export {
     newBalance, 
     nike, 
     sage, 
-    zoom
+    zoom,
+    construccion
 }
