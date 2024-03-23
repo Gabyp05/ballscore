@@ -21,7 +21,7 @@ const Teams = () => {
         if (data.body) {
             data = Object.values(data.body);
         }
-        console.log(data);
+  
         setTeams(data);
       }
       catch (error) {
