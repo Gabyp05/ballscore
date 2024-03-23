@@ -1,4 +1,4 @@
-import AllTeams from '../components/Teams/AllTeams'
+import AllTeams from '../../components/Teams/AllTeams'
 
 const Teams = () => {
   return (

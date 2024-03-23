@@ -51,7 +51,7 @@ const Teams = () => {
             </div>
               <div className="flex flex-col gap-8"> 
                 {americanLeagueTeams.map((team, index) => ( 
-                  <Link to={`/team/${team.teamName}`}>
+                  <Link to={`/teams/${team.id}`}>
                     <div key={index} className="flex flex-row gap-4 items-center">
                       <img src={teamLogos[team?.id]?.src} alt={teamLogos[team?.id]?.alt}  className='h-[40px] md:h-[50px] object-contain'/>
                       <h2 className='font-raleway text-white text-xs md:text-[18px] text-center font-medium'>{team.name}</h2>
@@ -67,7 +67,7 @@ const Teams = () => {
             </div>
             <div className="flex flex-col gap-8">  
               {nationalLeagueTeams.map((team, index) => (   
-                <Link to={`/team/${team.teamName}`}>
+                <Link to={`/teams/${team.id}`}>
                   <div key={index} className="flex flex-row gap-4 items-center">
                     <img src={teamLogos[team?.id]?.src} alt={teamLogos[team?.id]?.alt}  className='h-[40px] md:h-[50px] object-contain'/>
                     <h2 className='font-raleway text-white text-xs md:text-[18px] text-center font-medium'>{team.name}</h2>
