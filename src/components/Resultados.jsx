@@ -45,7 +45,7 @@ const Resultados = () => {
     
 
   return (
-    <section id='resultados' className='container mx-auto py-12 md:py-16 mb-80 flex flex-col animate-fade-in-down'>
+    <section id='resultados' className='container mx-auto py-12 md:py-16 flex flex-col animate-fade-in-down'>
         <div className="max-w-4xl flex flex-col md:flex-row gap-x-2.5 items-center md:items-start justify-center md:justify-start pb-8">
             <h1 className='font-syne font-bold text-[36px] text-7xl text-center md:text-start text-white mb-2.5'> Últimos </h1>
             <span className='font-syne font-bold text-[36px] text-7xl mb-2.5 text-primary'>Resultados</span> 

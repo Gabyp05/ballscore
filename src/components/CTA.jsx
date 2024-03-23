@@ -9,7 +9,7 @@ const CTA = () => {
             <h1 className='font-syne font-bold text-[36px] text-center md:text-start md:text-[56px] text-white'><span className='text-primary'>Conoce</span> a los jugadores</h1>
 
             <p className='max-w-2xl px-5 md:px-0 font-raliway font-bold text-paragraph text-sm md:text-base text-pretty leading-7 tracking-widest'>
-            ¿Quieres saber más sobre los jugadores de tus equipos favoritos? Explora nuestras listas de equipos y descubre las estadísticas, logros y más de cada jugador. Conoce a los héroes detrás de cada juego y sigue sus carreras en tiempo real.<br/><br/>
+            ¿Quieres saber más sobre los jugadores de tus equipos favoritos? Explora nuestras listas de equipos y conoce a los miembros del roster. Descubre a los héroes detrás de cada juego y sigue sus carreras en tiempo real.<br/><br/>
             ¡Haz clic en '<span className='text-primary'>Ver Equipos</span>' para comenzar!
             </p>
 
@@ -22,7 +22,7 @@ const CTA = () => {
             </div>
         </div>
         <div className="right">
-            <div className="absolute size-[250px] md:size-[350px] object-cover border-2 border-primary p-2 rounded-full animate-poped"></div>
+            <div className="absolute size-[250px] md:size-[350px] object-cover border-2 border-primary p-2 rounded-full animate-pop"></div>
             <img src={jugador} alt="Jugador" width={320} height={320} 
             className='size-[250px] md:size-[350px] object-cover  rounded-full' />
         </div> 

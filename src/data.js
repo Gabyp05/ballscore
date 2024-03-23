@@ -1,4 +1,4 @@
-import {Detroit, Baltimore, Boston, WhiteSox, Cleveland, Houston, Kansas, Angels, Minnesota, Yankees, Oakland, Seattle, Tampa, Texas, Toronto, Arizona, Atlanta, Cubs, Cincinnati, Colorado, Dodgers,Miami, Milwaukee, Mets, Phillips, Pirates, Padres, Giants, Cardinals, Washington, github, linkedin, instagram,} from "./assets";
+import {Detroit, Baltimore, Boston, WhiteSox, Cleveland, Houston, Kansas, Angels, Minnesota, Yankees, Oakland, Seattle, Tampa, Texas, Toronto, Arizona, Atlanta, Cubs, Cincinnati, Colorado, Dodgers,Miami, Milwaukee, Mets, Phillips, Pirates, Padres, Giants, Cardinals, Washington, github, linkedin, instagram, budweiser, corona, gatorade, hankook, mastercard, newBalance, nike, sage, zoom} from "./assets";
 
 export const navLinks = [
     {
@@ -176,3 +176,73 @@ export const teamLogos = {
         alt: 'Washington Nationals Logo',
     },
   };
+
+export const partners = [
+    {
+        id: 'budweiser',
+        src: budweiser,
+        alt: 'Budweiser',
+        url: "https://www.anheuser-busch.com/",
+    },
+    {
+        id: 'corona',
+        src: corona,
+        alt: 'Corona',
+        url: "https://www.coronausa.com/",
+
+    },
+    {
+        id: 'gatorade',
+        src: gatorade,
+        alt: 'Gatorade',
+        url: "https://www.gatorade.com/",
+
+    },
+    {
+        id: 'hankook',
+        src: hankook,
+        alt: 'Hankook',
+        url: "https://www.hankooktire.com/us/",
+
+    },
+    {
+        id: 'mastercard',
+        src: mastercard,
+        alt: 'Mastercard',
+        url: "https://www.mastercard.us/en-us.html",
+
+    },
+    {
+        id: 'newBalance',
+        src: newBalance,
+        alt: 'New Balance',
+        url: "https://www.newbalance.com/",
+
+    },
+    {
+        id: 'nike',
+        src: nike,
+        alt: 'Nike',
+        url: "https://www.nike.com/us/es/",
+
+    },
+    {
+        id: 'sage',
+        src: sage,
+        alt: 'Sage',
+        url: "https://www.sage.com/en-gb/",
+
+    },
+    {
+        id: 'zoom',
+        src: zoom,
+        alt: 'Zoom',
+        url: "https://zoom.us/",
+
+    },
+]
+
+   
+    
+
+    

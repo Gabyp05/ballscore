@@ -19,7 +19,9 @@ const Header = () => {
                   key={nav.id}
                   className={`font-raleway font-medium cursor-pointer text-[16px] text-white hover:text-primary`}
                   >
-                  <NavLink to={nav.path} className={({ isActive }) =>
+                  <NavLink to={nav.path} 
+                  onClick={() => setToggle(false)} 
+                  className={({ isActive }) =>
                       isActive ? 'text-primary font-bold' : 'text-white font-semibold'
                   }>
                       {nav.name}
@@ -42,7 +44,9 @@ const Header = () => {
                     key={nav.id}
                     className={`font-raleway font-medium cursor-pointer text-[16px] text-white hover:text-primary`}
                     >
-                    <NavLink to={nav.path} className={({ isActive }) =>
+                    <NavLink to={nav.path} 
+                    onClick={() => setToggle(false)} 
+                    className={({ isActive }) =>
                         isActive ? 'text-dark font-bold' : 'text-white font-semibold'
                     }>
                         {nav.name}
