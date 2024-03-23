@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from "react-router-dom"
 import { teamLogos } from '../../data';
 
 const AllResults = () => {
@@ -67,24 +68,24 @@ const AllResults = () => {
                   </div>
                   <div className="flex flex-row items-baseline justify-center gap-x-4 md:gap-x-12">
                       <div className="flex flex-col items-center">
-                      {/* <Link to={`/team/${game.teams?.away?.team?.id}`}>  */}
+                      <Link to={`/teams/${game.teams?.away?.team?.id}`}> 
                           <div className="flex flex-col gap-4 items-center">
                               <img src={teamLogos[game.teams?.away?.team?.id]?.src} alt={teamLogos[game.teams?.away?.team?.id]?.alt}  className='h-[50px] sm:h-auto max-w-[100px] md:max-w-[150px] object-contain'/>
                               <h2 className='font-raleway text-white text-xs md:text-[18px] text-center font-bold'>{game.teams?.away?.team?.name}</h2>
                           </div>  
-                      {/* </Link>  */}
+                      </Link>  
                           <span className='md:pt-4 font-raleway text-white text-2xl md:text-[50px] font-bold'> {game.teams?.away?.score} </span>
                       </div>    
                       <div className="vs">
                           <h1 className='font-syne font-bold text-xl md:text-7xl text-white drop-shadow-4xl'>VS</h1>
                       </div> 
                       <div className="flex flex-col items-center">    
-                          {/* <Link to={`/team/${game.teams?.home?.team?.id}`}>  */}
+                          <Link to={`/teams/${game.teams?.home?.team?.id}`}>  
                           <div className="flex flex-col gap-4 items-center">
                               <img src={teamLogos[game.teams?.home?.team?.id]?.src} alt={teamLogos[game.teams?.home?.team?.id]?.alt}  className='h-[50px] sm:h-auto max-w-[100px] md:max-w-[150px] object-contain' />
                               <h2 className='font-raleway text-white text-xs md:text-[18px] text-center font-bold'>{game.teams?.home?.team?.name}</h2>
                           </div> 
-                          {/* </Link>  */}            
+                          </Link>             
                           <span className='md:pt-4 font-raleway text-white text-2xl md:text-[50px] font-bold'> {game.teams?.home?.score} </span>
                       </div>   
                   </div>     
@@ -93,7 +94,7 @@ const AllResults = () => {
             ))
             ) : (
             <h1 className='font-syne font-bold text-2xl text-white mb-2.5'>
-                Cargando...
+                Cargando..
             </h1>
             )}                     
         </div>
