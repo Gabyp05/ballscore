@@ -37,7 +37,7 @@ const Header = () => {
             className="w-[28px] h-[28px] object-contain"
             onClick={() => setToggle((prev) => !prev)}
           />
-          <div className={`${toggle ? 'flex' : 'hidden'} font-raleway uppercase font-bold leading-3 text-sm p-4 bg-gradient-to-t from-[#FDD995] via-[#FAAF6A] to-[#F8853E] absolute top-14 right-0 mx-4 my-2 min-w-[140px]  rounded-xl menu z-50`}>
+          <div className={`${toggle ? 'flex' : 'hidden'} font-raleway uppercase font-bold leading-3 text-sm p-12 bg-white/30 backdrop-blur-sm absolute top-16 right-0 my-2 w-full z-50 menu`}>
             <ul className="list-none flex flex-col justify-end items-center flex-1 gap-y-4 tracking-widest">
               {navLinks.map((nav) => (
                     <li 
@@ -47,7 +47,7 @@ const Header = () => {
                     <NavLink to={nav.path} 
                     onClick={() => setToggle(false)} 
                     className={({ isActive }) =>
-                        isActive ? 'text-dark font-bold' : 'text-white font-semibold'
+                        isActive ? 'text-primary font-bold' : 'text-white font-semibold'
                     }>
                         {nav.name}
                     </NavLink>
