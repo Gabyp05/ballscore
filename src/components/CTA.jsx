@@ -22,7 +22,7 @@ const CTA = () => {
             </div>
         </div>
         <div className="right">
-            <div className="absolute size-[250px] md:size-[350px] object-cover border-2 border-primary p-2 rounded-full animate-poped"></div>
+            <div className="absolute size-[250px] md:size-[350px] object-cover border-2 border-primary p-2 rounded-full animate-pop"></div>
             <img src={jugador} alt="Jugador" width={320} height={320} 
             className='size-[250px] md:size-[350px] object-cover  rounded-full' />
         </div> 
