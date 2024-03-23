@@ -56,37 +56,69 @@ const InfoTeam = () => {
       }, []);
 
   return (
-    <section id='resultados' className='container mx-auto py-16 mb-80 flex flex-col items-center justify-center'>
+    <section id='resultados' className='container mx-auto py-8 mb-20 flex flex-col items-center justify-center'>
         {team.map((team, index) => ( 
-        <div key={index} className="flex flex-col gap-4">
-            <h1 className='text-white text-7xl'>{team.name}</h1>
-            <p>Abreviación: {team.abbreviation}</p>
-            <p>Estadio: {team.venue.name} </p>
-            <p>Liga: {team.league.name}</p>
-            <p>División: {team.division.name}</p>
-        </div>
+        <>
+            <h1 className='font-syne font-bold text-[30px] text-center md:text-start md:text-[56px] text-white mb-4'>
+                {team.name}
+            </h1>  
+            <div key={index} className="flex flex-col gap-4 mb-4">
+                <div className="flex flex-row gap-4 justify-start">
+                    <p className='font-syne font-bold text-primary text-base md:text-xl tracking-widest'>Abreviación</p>
+                    <span className='font-raleway text-white text-base md:text-xl tracking-widest'>{team.abbreviation}</span>
+                </div>
+                <div className="flex flex-row gap-4 justify-start">
+                    <p className='font-syne font-bold text-primary text-base md:text-xl tracking-widest'>Estadio</p>
+                    <span className='font-raleway text-white text-base md:text-xl tracking-widest'>{team.venue.name}</span>
+                </div>
+                <div className="flex flex-row gap-4 justify-start">
+                    <p className='font-syne font-bold text-primary text-base md:text-xl tracking-widest'>Liga</p>
+                    <span className='font-raleway text-white text-base md:text-xl tracking-widest'>{team.league.name}</span>
+                </div>
+                <div className="flex flex-row gap-4 justify-start">
+                    <p className='font-syne font-bold text-primary text-base md:text-xl tracking-widest'>División</p>
+                    <span className='font-raleway text-white text-base md:text-xl tracking-widest'>{team.division.name}</span>
+                </div>
+            </div>
+        </>
         ))}
 
-<table className='text-white text-center'>
-    <thead>
-        <tr>
-            <th>Nombre</th>
-            <th>Camiseta</th>
-            <th>Posición</th>
-            <th>Estatus</th>
-        </tr>
-    </thead>
-    <tbody>
-        {roster.map((player, index) => (
-            <tr key={index}>
-                <td>{player.person.fullName}</td>
-                <td>{player.jerseyNumber}</td>
-                <td>{player.position.abbreviation}</td>
-                <td>{player.status.description}</td>
-            </tr>
-        ))}
-    </tbody>
-</table>
+        <div className="relative overflow-x-auto shadow-md rounded-xl">
+            <h1 className='font-syne font-bold text-[30px] text-center md:text-start md:text-[56px] text-white mb-4'>Roster</h1>
+            <table className="w-full text-sm text-center font-raleway rtl:text-right text-white ">
+                <thead className="text-xs text-white uppercase bg-primary/75">
+                    <tr>
+                        <th scope="col" className="px-6 py-3">
+                            Nombre
+                        </th>
+                        <th scope="col" className="px-6 py-3">
+                            Camiseta
+                        </th>
+                        <th scope="col" className="px-6 py-3">
+                            Posición
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                {roster.map((player, index) => (
+                    <tr key={index} className="bg-white/10 backdrop-blur-sm border-b border-gray-700 hover:bg-primary/55 ">
+                        <th scope="row" className="px-6 py-4 font-medium whitespace-nowrap text-white">
+                            {player.person.fullName}
+                        </th>
+                        <td className="px-6 py-4 ">
+                            {player.jerseyNumber}
+                        </td>
+                        <td className="px-6 py-4">
+                            {player.position.abbreviation}
+                        </td>
+                    </tr>
+                 ))}
+                </tbody>
+            </table>
+        </div>
+
+
+
 
 
     </section>
