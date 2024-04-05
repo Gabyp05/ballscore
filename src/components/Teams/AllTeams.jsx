@@ -49,7 +49,7 @@ const Teams = () => {
               <img src={american} alt="Liga Americana" className='size-[60px]' />
               <h1 className='text-white font-raleway text-2xl'>Liga Americana</h1>  
             </div>
-              <div className="flex flex-col gap-8"> 
+              <div key={americanLeagueTeams.id} className="flex flex-col gap-8"> 
                 {americanLeagueTeams.map((team, index) => ( 
                   <Link to={`/teams/${team.id}`}>
                     <div key={index} className="flex flex-row gap-4 items-center">
@@ -65,7 +65,7 @@ const Teams = () => {
               <img src={national} alt="Liga Nmericana" className='size-[60px]' />
               <h1 className='text-white font-raleway text-2xl'>Liga Nacional</h1>  
             </div>
-            <div className="flex flex-col gap-8">  
+            <div key={nationalLeagueTeams.id} className="flex flex-col gap-8">  
               {nationalLeagueTeams.map((team, index) => (   
                 <Link to={`/teams/${team.id}`}>
                   <div key={index} className="flex flex-row gap-4 items-center">

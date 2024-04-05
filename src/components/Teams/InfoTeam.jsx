@@ -67,34 +67,38 @@ const InfoTeam = () => {
 
     
     if (loading) {
-        return <h1 className='font-syne font-bold text-2xl text-white mb-2.5'>Cargando..</h1>; 
+        return <h1 className='container mx-auto py-8 mb-8 font-syne font-bold text-2xl text-white'>Cargando..</h1>; 
     }
 
   return (
     <>
-    <section key="uniqueKey" className='container mx-auto py-8 mb-4 flex flex-col items-center justify-center'>
+    <section key={team.id} className='container mx-auto py-8 mb-4 flex flex-col items-center justify-center'>
         
         {team.length > 0 && team.map((team, index) => (
         <>
             <h1 className='font-syne font-bold text-[30px] text-center md:text-start md:text-[56px] text-white mb-4'>
                 {team.name}
             </h1>  
-            <div key={index} className="flex flex-col gap-4 mb-4">
-                <div className="flex flex-row gap-4 justify-start">
-                    <p className='font-syne font-bold text-primary text-base md:text-xl tracking-widest'>Abreviación</p>
-                    <span className='font-raleway text-white text-base md:text-xl tracking-widest'>{team.abbreviation}</span>
+            <div key={team.id} className="flex flex-col sm:flex-row gap-4 sm:gap-24 mb-4 px-4">
+                <div className="flex flex-col gap-4 justify-start">
+                    <div className="flex flex-row gap-4 justify-start">
+                        <p className='font-syne font-bold text-primary text-base md:text-xl tracking-widest'>Abreviación</p>
+                        <span className='font-raleway text-white text-base md:text-xl tracking-widest'>{team.abbreviation}</span>
+                    </div>
+                    <div className="flex flex-row gap-4 justify-start">
+                        <p className='font-syne font-bold text-primary text-base md:text-xl tracking-widest'>Estadio</p>
+                        <span className='font-raleway text-white text-base md:text-xl tracking-widest'>{team.venue.name}</span>
+                    </div>
                 </div>
-                <div className="flex flex-row gap-4 justify-start">
-                    <p className='font-syne font-bold text-primary text-base md:text-xl tracking-widest'>Estadio</p>
-                    <span className='font-raleway text-white text-base md:text-xl tracking-widest'>{team.venue.name}</span>
-                </div>
-                <div className="flex flex-row gap-4 justify-start">
-                    <p className='font-syne font-bold text-primary text-base md:text-xl tracking-widest'>Liga</p>
-                    <span className='font-raleway text-white text-base md:text-xl tracking-widest'>{team.league.name}</span>
-                </div>
-                <div className="flex flex-row gap-4 justify-start">
-                    <p className='font-syne font-bold text-primary text-base md:text-xl tracking-widest'>División</p>
-                    <span className='font-raleway text-white text-base md:text-xl tracking-widest'>{team.division.name}</span>
+                <div className="flex flex-col gap-4 justify-start">
+                    <div className="flex flex-row gap-4 justify-start">
+                        <p className='font-syne font-bold text-primary text-base md:text-xl tracking-widest'>Liga</p>
+                        <span className='font-raleway text-white text-base md:text-xl tracking-widest'>{team.league.name}</span>
+                    </div>
+                    <div className="flex flex-row gap-4 justify-start">
+                        <p className='font-syne font-bold text-primary text-base md:text-xl tracking-widest'>División</p>
+                        <span className='font-raleway text-white text-base md:text-xl tracking-widest'>{team.division.name}</span>
+                    </div>
                 </div>
             </div>
         </>
