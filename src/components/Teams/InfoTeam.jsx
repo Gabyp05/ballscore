@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import RosterTable from './RosterTable';
 
 const InfoTeam = () => {
 
@@ -53,13 +54,25 @@ const InfoTeam = () => {
         fetchTeams();
         fetchRoster();
     }, []);
+
+    const pitchers = roster.filter(player => player.position.abbreviation === 'P');
+    const catchers = roster.filter(player => player.position.abbreviation === 'C');
+    const infielders = roster.filter(player => player.position.abbreviation === '1B' 
+                                            || player.position.abbreviation === '2B' 
+                                            || player.position.abbreviation === 'SS' 
+                                            || player.position.abbreviation === '3B');
+    const outfielders = roster.filter(player => player.position.abbreviation === 'LF' 
+                                            || player.position.abbreviation === 'CF' 
+                                            || player.position.abbreviation === 'RF');
+
     
     if (loading) {
         return <h1 className='font-syne font-bold text-2xl text-white mb-2.5'>Cargando..</h1>; 
     }
 
   return (
-    <section key="uniqueKey" className='container mx-auto py-8 mb-20 flex flex-col items-center justify-center'>
+    <>
+    <section key="uniqueKey" className='container mx-auto py-8 mb-4 flex flex-col items-center justify-center'>
         
         {team.length > 0 && team.map((team, index) => (
         <>
@@ -85,46 +98,40 @@ const InfoTeam = () => {
                 </div>
             </div>
         </>
-        ))}
-
-        <div className="relative overflow-x-auto shadow-md rounded-xl">
+        ))}   
+    </section>
+    <section className='container mx-auto mb-20'>
+        <div className="relative overflow-x-auto">
             {roster.length > 0 && (
             <>
-                <h1 className='font-syne font-bold text-[30px] text-center md:text-start md:text-[56px] text-white mb-4'>Roster</h1>
-                <table className="w-full text-sm text-center font-raleway rtl:text-right text-white ">
-                    <thead className="text-xs text-white uppercase bg-primary/75">
-                        <tr>
-                            <th scope="col" className="px-6 py-3">
-                                Nombre
-                            </th>
-                            <th scope="col" className="px-6 py-3">
-                                Camiseta
-                            </th>
-                            <th scope="col" className="px-6 py-3">
-                                Posición
-                            </th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                    {roster.map((player, index) => (
-                        <tr key={index} className="bg-white/10 backdrop-blur-sm border-b border-gray-700 hover:bg-primary/55 ">
-                            <th scope="row" className="px-6 py-4 font-medium whitespace-nowrap text-white">
-                                {player.person.fullName}
-                            </th>
-                            <td className="px-6 py-4 ">
-                                {player.jerseyNumber}
-                            </td>
-                            <td className="px-6 py-4">
-                                {player.position.abbreviation}
-                            </td>
-                        </tr>
-                    ))}
-                    </tbody>
-                </table>
+                <h1 className='font-syne font-bold text-[30px] text-center md:text-start md:text-[56px] text-white mb-4'>Roster Activo</h1>
+                <div className="flex flex-col md:flex-row gap-8 px-4">
+                    <div className='flex flex-col md:flex-row gap-8'>
+                        <div className="flex flex-col">
+                            <h1 className='font-syne font-bold text-[24px] text-center md:text-start md:text-[30px] text-white mb-4'>Pitchers</h1>
+                            <RosterTable players={pitchers} />
+                        </div>
+                        <div className="flex flex-col">
+                            <h1 className='font-syne font-bold text-[24px] text-center md:text-start md:text-[30px] text-white mb-4'>Catchers</h1>
+                            <RosterTable players={catchers} /> 
+                        </div>                
+                    </div>
+                    <div className='flex flex-col md:flex-row gap-8'>
+                        <div className="flex flex-col">
+                            <h1 className='font-syne font-bold text-[24px] text-center md:text-start md:text-[30px] text-white mb-4'>Infielders</h1>
+                            <RosterTable players={infielders} />
+                        </div>
+                        <div className="flex flex-col">
+                            <h1 className='font-syne font-bold text-[24px] text-center md:text-start md:text-[30px] text-white mb-4'>Outfielders</h1>
+                            <RosterTable players={outfielders} /> 
+                        </div>                
+                    </div>
+                </div>
             </>
             )}
         </div>
     </section>
+    </>
   )
 }
 
