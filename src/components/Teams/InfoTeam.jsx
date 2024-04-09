@@ -15,7 +15,7 @@ const InfoTeam = () => {
             const response = await fetch(`https://baseball4.p.rapidapi.com/v1/mlb/teams?teamId=${teamId}`, {
               method: 'GET',
               headers: {
-              'X-RapidAPI-Key': '425a2f8650msh2c93977c1d9775fp1d700djsnccb1675c3877',
+              'X-RapidAPI-Key': '759c6b95d4msh112e4efe0c17b03p148719jsnedff2d29596a',
               'X-RapidAPI-Host': 'baseball4.p.rapidapi.com'
               }
           });
