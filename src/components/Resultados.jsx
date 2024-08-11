@@ -48,6 +48,7 @@ const Resultados = () => {
 
     fetchGameSchedule();
   }, []);
+    
 
   return (
     <section
@@ -142,4 +143,4 @@ const Resultados = () => {
   );
 };
 
-export default Resultados;
+export default Resultados
