@@ -12,6 +12,7 @@
   "dependencies": {
     "@fontsource-variable/raleway": "^5.0.18",
     "@fontsource-variable/syne": "^5.0.19",
+    "@formkit/tempo": "^0.1.2",
     "@midudev/tailwind-animations": "^0.0.7",
     "dotenv": "^16.4.5",
     "flowbite": "^2.3.0",
