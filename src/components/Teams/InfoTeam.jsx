@@ -65,7 +65,7 @@ const InfoTeam = () => {
 
   if (loading) {
     return (
-      <h1 className="container mx-auto py-8 mb-8 font-syne font-bold text-2xl text-white">
+      <h1 className="container mx-auto py-16 mb-8 font-syne font-bold text-2xl text-white pb-96 items-center">
         Cargando..
       </h1>
     );

@@ -62,7 +62,9 @@ const AllResults = () => {
               <GameCard
               key={game.gamePk}
               awayTeamName={game.teams?.away?.team?.name}
+              awayTeamId={game.teams?.away?.team?.id}
               homeTeamName={game.teams?.home?.team?.name}
+              homeTeamId={game.teams?.home?.team?.id}
               gameStatus={game.status.detailedState}
               gameDate={game.formattedGameDate}
               gameLive={game.status.abstractGameState}
