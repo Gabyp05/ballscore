@@ -1,9 +1,12 @@
 import PropTypes from "prop-types";
 import Score from "./Score";
+import { Link } from "react-router-dom";
 
 const GameCard = ({
   awayTeamName,
+  awayTeamId,
   homeTeamName,
+  homeTeamId,
   gameStatus,
   gameLive,
   gameDate,
@@ -50,6 +53,7 @@ const GameCard = ({
 
       <div className="flex justify-between items-center gap-4">
         <div className="flex flex-col gap-2 justify-end">
+          <Link to={`/teams/${awayTeamId}`}>
           <div className="flex flex-row gap-2 items-center">
             <img
               src={teamLogoAway}
@@ -60,7 +64,9 @@ const GameCard = ({
               {awayTeamName}
             </h3>
           </div>
+          </Link>
 
+          <Link to={`/teams/${homeTeamId}`}>
           <div className="flex flex-row gap-2 items-center">
             <img
               src={teamLogoHome}
@@ -71,6 +77,7 @@ const GameCard = ({
               {homeTeamName}
             </h3>
           </div>
+          </Link>
         </div>
         <div className="flex flex-col gap-2 items-center justify-center">
           <div className="score_away">
@@ -87,7 +94,9 @@ const GameCard = ({
 
 GameCard.propTypes = {
   awayTeamName: PropTypes.string,
+  awayTeamId: PropTypes.string,
   homeTeamName: PropTypes.string,
+  homeTeamId: PropTypes.string,
   gameStatus: PropTypes.string,
   gameLive: PropTypes.string,
   gameDate: PropTypes.string,
