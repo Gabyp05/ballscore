@@ -8,7 +8,7 @@ const Header = () => {
   const [toggle, setToggle] = useState(false);
 
   return (
-    <header className="container mx-auto py-6 px-2 sm:px-0 flex items-center justify-between z-50">
+    <header className="container mx-auto py-6 px-2 sm:px-5 lg:px-0 flex items-center justify-between z-50">
         <div className="logo">
           <Link to="/">
             <img src={logo} alt="Logo BallScore" />

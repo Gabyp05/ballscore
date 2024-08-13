@@ -240,6 +240,7 @@ export const partners = [
         url: "https://zoom.us/",
 
     },
+    
 ]
 
    
