@@ -46,7 +46,7 @@ const GameCard = ({
           </div> 
         ) : (
           <span className="badge game-status w-24">
-            {gameStatus === "In Progress" ? "En Progreso" : "Finalizado"}
+            {gameStatus === "In Progress" ? "En Progreso" : gameStatus === "Warmup" ? "Por empezar" : "Finalizado"}
           </span>
         )}
       </div>
